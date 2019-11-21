@@ -1,0 +1,121 @@
+/* || General setup */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  background-color: #a9a9a9;
+}
+
+body {
+  width: 60%;
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+
+h1, h2, h3 {
+  color: #2a2a2a;
+}
+
+p, input, li {
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 2px 2px 10px black;
+  flex: 5;
+  text-transform: uppercase;  
+}
+
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main, header, nav, footer, section {
+  background-color: rgba(0,255,0,0.5);
+  padding: 1%;
+}
+
+nav {
+  height: 60px;
+  text-align: center;
+  font-size: 1.8rem;
+  color:#ffffff;  
+}
+
+
+nav input { 
+  height:50px;
+  width:130px;
+  background-color:#254a28;
+  font-size: 1.8rem;
+  color:#ffffff;
+  margin-left: 5px; 
+}
+
+#ntecle {
+  width: 50px;	
+}
+
+.ngt {
+  margin-left:15px;		
+}
+
+/* #estado { */
+  /* text-align: center;  */
+/* } */
+
+/* .cablin { */
+  /* text-align: center; */
+  /* background-color: #296653; */
+/* } */
+/* .linea { */
+  /* margin-left: 5px; */
+  /* margin-right: 15px; */
+  /* color:#ffffff;	   */
+/* } */
+
+.crow { 
+  background-color: #296653;
+  color:#ffffff;
+  font-size: 1.8rem;  
+}
+
+.ccol, .lcol {
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.crow:after, .lrow:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  margin-top: 10px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8" />
+	<meta name="description" content="Juego adivina el número" />
+	<meta name="keywords" content="Juego, Número" />
+    
+	<title>Adivina el Número</title>
+    <link rel="stylesheet" href="style.css">
+	<script src="numero.js"></script>
+  </head>
+
+<body>
+    <!-- Here is our main header that is used across all the pages of our website -->
+
+    <header>
+	  <!--<img src="dove.png" alt="a simple dove logo"> -->
+      <h1>Adivina el N&uacutemero</h1> 
+    </header>
+
+    <nav>    
+        <input type="button" value="Inicio" id="inicio">
+		<input  pattern="[0-9]{4}" name="numero" id="ntecle" maxlength="4" title="Teclee Numero" width="15">
+		<input type="button" value=">>" id="ok">
+    </nav>
+
+    <main>
+      <section>				
+        <div class="crow">
+         <div class="ccol">N&uacutemero</div>
+         <div class="ccol">Aciertos</div>
+         <div class="ccol">Posibles</div>
+		 <div class="ccol">Intentos</div>
+        </div>		
+		
+		<div class="lrow">
+         <div class="lcol" id="col1"></div>
+         <div class="lcol" id="col2"></div>
+         <div class="lcol" id="col3"></div>
+		 <div class="lcol" id="col4"></div>
+        </div>
+		
+	  </section>
+
+    </main>
+
+    <footer>
+      <!-- <p><span class="ngt">N&uacutemero Generado:</span> <span id="ngen"> **** </span></p> -->
+	  <div class="pie"> </div>
+    </footer>
+
+</body>
+
+</html>
