@@ -41,7 +41,7 @@ h2 {
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   line-height: 1.5;
 }
 
@@ -61,7 +61,7 @@ main, header, nav, footer, section {
 nav {
   height: 60px;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   color:#ffffff;  
 }
 
@@ -70,9 +70,9 @@ nav input {
   height:50px;
   width:120px;
   background-color:#254a28;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   color:#ffffff;
-  margin-left: 10px; 
+  margin-left: 35px; 
 }
 
 .digito {
@@ -80,31 +80,17 @@ nav input {
 }
 
 #ntecle {
-  width: 50px;	
+  width: 60px;	
 }
 
 .ngt {
   margin-left:15px;		
 }
 
-/* #estado { */
-  /* text-align: center;  */
-/* } */
-
-/* .cablin { */
-  /* text-align: center; */
-  /* background-color: #296653; */
-/* } */
-/* .linea { */
-  /* margin-left: 5px; */
-  /* margin-right: 15px; */
-  /* color:#ffffff;	   */
-/* } */
-
 .crow { 
   background-color: #296653;
   color:#ffffff;
-  font-size: 1.8rem;  
+  font-size: 2.8rem;  
 }
 
 .ccol, .lcol {
