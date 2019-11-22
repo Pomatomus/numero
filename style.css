@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  width: 60%;
+  width: 98%;
   min-width: 200px;
   margin: 0 auto;
 }
@@ -41,7 +41,7 @@ h2 {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.5;
 }
 
@@ -68,11 +68,15 @@ nav {
 
 nav input { 
   height:50px;
-  width:130px;
+  width:120px;
   background-color:#254a28;
   font-size: 1.8rem;
   color:#ffffff;
-  margin-left: 5px; 
+  margin-left: 10px; 
+}
+
+.digito {
+  width:30px;
 }
 
 #ntecle {

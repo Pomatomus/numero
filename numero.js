@@ -8,7 +8,16 @@ var lsIntentos=0;
 // Inicio
 function iniciar(){
 	document.getElementById('inicio').addEventListener('click', comenzar, false);
-	document.getElementById('ok').addEventListener('click', comprobar, false);
+	//document.getElementById('ok').addEventListener('click', comprobar, false);
+	document.getElementById('n1').addEventListener('click', teclea1, false);
+	document.getElementById('n2').addEventListener('click', teclea2, false);
+	document.getElementById('n3').addEventListener('click', teclea3, false);
+	document.getElementById('n4').addEventListener('click', teclea4, false);
+	document.getElementById('n5').addEventListener('click', teclea5, false);
+	document.getElementById('n6').addEventListener('click', teclea6, false);
+	document.getElementById('n7').addEventListener('click', teclea7, false);
+	document.getElementById('n8').addEventListener('click', teclea8, false);
+	document.getElementById('n9').addEventListener('click', teclea9, false);
 	comenzar();
 } 
 
@@ -47,13 +56,34 @@ function comenzar() {
   col3.innerHTML="";
   col4.innerHTML="";
   
-  document.getElementById('ntecle').focus();
+  //document.getElementById('ntecle').focus();
 } 
 
 function getn() {
   var max=10;
   var min=1;
   return Math.floor(Math.random() * (max - min)) + min;	
+}
+
+function teclea1() { teclea(1);}
+function teclea2() { teclea(2);}
+function teclea3() { teclea(3);}
+function teclea4() { teclea(4);}
+function teclea5() { teclea(5);}
+function teclea6() { teclea(6);}
+function teclea7() { teclea(7);}
+function teclea8() { teclea(8);}
+function teclea9() { teclea(9);}
+
+function teclea(d) {
+  var nt=document.getElementById('ntecle');//.value;
+  var existe= false;
+  for (var i = 0; i < nt.value.length; i++) {
+    if (nt.value[i]==d) { existe=true; } 
+  }
+  if (!existe) { nt.value+=d; }	
+  if (nt.value.length > 3) { comprobar() }
+  //console.log(nt.value.length);	
 }
 
 function comprobar() {
@@ -86,7 +116,7 @@ function comprobar() {
    col4.innerHTML= "<p>"+ intentos +"</p>"+col4.innerHTML;
    document.getElementById('ntecle').value="";
   }
-  document.getElementById('ntecle').focus();
+  //document.getElementById('ntecle').focus();
   
   if (m==4){
 	  finjuego();
