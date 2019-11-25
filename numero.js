@@ -3,7 +3,7 @@
 // Globales
 var numegen=[0,0,0,0];
 var intentos=0;
-var lsIntentos=0;
+var jsIntentos={ "intentos": 0, "fecha":""};
 
 // Inicio
 function iniciar(){
@@ -31,10 +31,14 @@ function comenzar() {
   var col2=document.getElementById('col2');
   var col3=document.getElementById('col3');
   var col4=document.getElementById('col4');
-  lsIntentos=localStorage.getItem('lsIntentos');
-  if(lsIntentos== null) {
-    lsIntentos=0;
-  } 
+  var texto=localStorage.getItem('jsIntentos');
+  if(texto== null) {
+    jsIntentos.intentos=0;
+	jsIntentos.fecha="";
+  } else { 
+    jsIntentos= JSON.parse(texto);
+  }
+  
   while (i < 4) {
     n=getn();
 	e=false;
@@ -48,8 +52,7 @@ function comenzar() {
       i++;	  
 	}
   } 
-  
-  pie.innerHTML="<p> Numero: ****  Mejor Resultado: "+lsIntentos+"</p>";
+  pie.innerHTML="<p> Numero: ****  Mejor Resultado: "+jsIntentos.intentos+" - "+jsIntentos.fecha+"</p>";	
   intentos=0;
   col1.innerHTML="";
   col2.innerHTML="";
@@ -76,7 +79,7 @@ function teclea8() { teclea(8);}
 function teclea9() { teclea(9);}
 
 function teclea(d) {
-  var nt=document.getElementById('ntecle');//.value;
+  var nt=document.getElementById('ntecle');
   var existe= false;
   for (var i = 0; i < nt.value.length; i++) {
     if (nt.value[i]==d) { existe=true; } 
@@ -97,7 +100,6 @@ function comprobar() {
   var datos="";
   if (nt>1111) {
    for (var i = 0; i < 4; i++) {
-    //console.log(nt[i]);
 	for (var j= 0; j < 4; j++) {
       if (nt[i]==numegen[j]) {
         if (i==j) {
@@ -125,12 +127,17 @@ function comprobar() {
 
 function finjuego() {
   var pie=document.getElementsByClassName('pie')[0];
-  if (lsIntentos==0 || intentos<lsIntentos) {
-	  lsIntentos=intentos;
-	  localStorage.setItem('lsIntentos',lsIntentos);
+  var d = new Date();
+  if (jsIntentos.intentos==0 || intentos<jsIntentos.intentos) {
+	  jsIntentos.intentos=intentos;
+	  jsIntentos.fecha=  d.getDate()+"/"+d.getMonth()+"/"+d.getFullYear()+"  "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+	  localStorage.setItem('jsIntentos',JSON.stringify(jsIntentos));	  
   }
-  pie.innerHTML="<p> Nuemro: "+ numegen +" Intentos: "+intentos+" Mejor resultado: "+lsIntentos+" </p>";
+  pie.innerHTML="<p> Numero: "+ numegen +" Intentos: "+intentos+" Mejor resultado: "+jsIntentos.intentos+" - "+jsIntentos.fecha+"</p>";
+  
   window.alert("!!! Correcto ¡¡¡");	
 }
+
+
 
 window.addEventListener('load', iniciar, false);
